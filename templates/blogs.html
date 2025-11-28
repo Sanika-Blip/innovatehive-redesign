@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs – InnovateHive</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<header class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="{{ url_for('home') }}">
+      <span class="logo-pill">IH</span> InnovateHive
+    </a>
+  </div>
+</header>
+
+<section class="py-5 blog-list-section">
+  <div class="container">
+
+    <h1 class="fw-bold mb-3">All Blogs</h1>
+    <p class="text-muted mb-5">Explore insights from our team on product, engineering and design.</p>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="blog-card-extended">
+          <div class="blog-thumb" style="background-image:url('{{ url_for('static', filename='images/blog (3).jpg') }}');"></div>
+          <div class="blog-content">
+            <h4>Shipping v1.0 Faster Without Chaos</h4>
+            <p>How we help founders trim scope, validate ideas and ship a usable v1.0 quickly.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card-extended">
+          <div class="blog-thumb" style="background-image:url('{{ url_for('static', filename='images/blog (2).jpg') }}');"></div>
+          <div class="blog-content">
+            <h4>Design Systems for Startups</h4>
+            <p>Lightweight design systems that keep UI consistent while supporting rapid development.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card-extended">
+          <div class="blog-thumb" style="background-image:url('{{ url_for('static', filename='images/blog (1).jpg') }}');"></div>
+          <div class="blog-content">
+            <h4>How We Build Scalable APIs</h4>
+            <p>Best practices for building reliable, scalable backend systems for modern apps.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card-extended">
+          <div class="blog-thumb" style="background-image:url('{{ url_for('static', filename='images/blog (1).jpeg') }}');"></div>
+          <div class="blog-content">
+            <h4>Improving UX with Micro-interactions</h4>
+            <p>Subtle animations that make your product feel polished and delightful.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card-extended">
+          <div class="blog-thumb" style="background-image:url('{{ url_for('static', filename='images/blog5.jpeg') }}');"></div>
+          <div class="blog-content">
+            <h4>Choosing the Right Tech Stack</h4>
+            <p>Frontend, backend and cloud decisions that impact long-term scalability.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card-extended">
+          <div class="blog-thumb" style="background-image:url('{{ url_for('static', filename='images/blog6.jpeg') }}');"></div>
+          <div class="blog-content">
+            <h4>AI Automation for Modern Businesses</h4>
+            <p>Using AI to automate tasks in support, analytics and marketing workflows.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card-extended">
+          <div class="blog-thumb" style="background-image:url('{{ url_for('static', filename='images/blog7.jpeg') }}');"></div>
+          <div class="blog-content">
+            <h4>Building Better Landing Pages</h4>
+            <p>Key elements to improve conversions, layout and mobile experience.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card-extended">
+          <div class="blog-thumb" style="background-image:url('{{ url_for('static', filename='images/blog8.png') }}');"></div>
+          <div class="blog-content">
+            <h4>Optimizing Web Performance</h4>
+            <p>How we reduce load times and improve Lighthouse scores for clients.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="blog-card-extended">
+          <div class="blog-thumb" style="background-image:url('{{ url_for('static', filename='images/blog9.jpeg') }}');"></div>
+          <div class="blog-content">
+            <h4>Writing Better UX Copy</h4>
+            <p>Microcopy that improves clarity and reduces confusion for users.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-4">
+      <a href="{{ url_for('home') }}#blogs" class="btn btn-outline-primary">Back to Home</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="py-4 bg-dark text-light text-center">
+    © {{ year }} InnovateHive. All rights reserved.
+</footer>
+
+</body>
+</html>

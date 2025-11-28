@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>InnovateHive – Digital Product Studio</title>
+  <meta
+    name="description"
+    content="InnovateHive helps startups and brands design, build and scale digital products with modern web, mobile and AI solutions."
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+  <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}"
+  />
+</head>
+<body>
+  <header class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+    <div class="container">
+     <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
+  <img src="{{ url_for('static', filename='images/logo.png') }}"
+       alt="InnovateHive Logo"
+       class="me-2"
+       style="height: 36px; width: auto;">
+  <span>InnovateHive</span>
+</a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <nav class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blogs">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Clients</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item">
+            <a class="btn btn-primary ms-lg-3" href="#contact">Let’s Talk</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="py-5 hero-section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <p class="badge bg-light text-primary mb-3 small d-inline-flex align-items-center">
+            <i class="bi bi-lightning-charge-fill me-2"></i> Digital Product Studio
+          </p>
+          <h1 class="display-5 fw-bold mb-3">
+            Build bold digital products that
+            <span class="text-gradient">actually ship</span>.
+          </h1>
+          <p class="lead text-muted mb-4">
+            InnovateHive partners with startups and brands to design, develop
+            and launch web, mobile and AI experiences that users love and
+            businesses rely on.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#projects" class="btn btn-primary btn-lg">
+              View our work
+              <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline-secondary btn-lg">
+              Get a project estimate
+            </a>
+          </div>
+          <div class="hero-meta d-flex flex-wrap gap-4">
+            <div>
+              <h3 class="h4 mb-0">40+</h3>
+              <p class="small text-muted mb-0">Projects delivered</p>
+            </div>
+            <div>
+              <h3 class="h4 mb-0">95%</h3>
+              <p class="small text-muted mb-0">Repeat clients</p>
+            </div>
+            <div>
+              <h3 class="h4 mb-0">4.9/5</h3>
+              <p class="small text-muted mb-0">Average rating</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img
+            src="{{ url_for('static', filename='images/hero.png') }}"
+            class="img-fluid hero-illustration"
+            alt="Illustration of designers and developers collaborating on digital products"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-5 border-top bg-white">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <h2 class="section-title">About InnovateHive</h2>
+          <p class="text-muted">
+            InnovateHive is a boutique digital studio that combines strategy,
+            design and engineering. We help teams ship meaningful products — on
+            time and with pixel-perfect execution.
+          </p>
+          <p class="text-muted">
+            From landing pages to complex dashboards, we focus on accessible,
+            fast and scalable experiences using modern stacks like React,
+            Next.js, Flask and cloud-native tooling.
+          </p>
+          <ul class="list-unstyled mt-3">
+            <li class="d-flex align-items-start mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              <span>Dedicated product squads for each engagement.</span>
+            </li>
+            <li class="d-flex align-items-start mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              <span>UX research and rapid prototyping before development.</span>
+            </li>
+            <li class="d-flex align-items-start">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              <span>Transparent communication and weekly demos.</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-card p-4 rounded-4 shadow-sm">
+            <h3 class="h5 mb-3">Key Numbers</h3>
+            <div class="row text-center">
+              <div class="col-4">
+                <p class="display-6 fw-bold mb-0">8+</p>
+                <p class="small text-muted">Years experience</p>
+              </div>
+              <div class="col-4">
+                <p class="display-6 fw-bold mb-0">20+</p>
+                <p class="small text-muted">Industries</p>
+              </div>
+              <div class="col-4">
+                <p class="display-6 fw-bold mb-0">3</p>
+                <p class="small text-muted">Continents</p>
+              </div>
+            </div>
+            <p class="small text-muted mt-3 mb-0">
+              We collaborate with founders, product leaders and marketing teams
+              who want a long-term design & development partner — not just a
+              one-off vendor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Services</h2>
+        <p class="text-muted">
+          Full-stack capabilities from strategy to deployment. You can work
+          with us end-to-end or pick only what you need.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 service-card">
+            <div class="card-body">
+              <div class="icon-pill mb-3">
+                <i class="bi bi-window-stack"></i>
+              </div>
+              <h3 class="h5">Web Design & Development</h3>
+              <p class="text-muted small">
+                Responsive, SEO-friendly websites and web apps built with
+                semantic HTML, CSS, JS and modern frameworks.
+              </p>
+              <ul class="small text-muted">
+                <li>Landing pages & marketing sites</li>
+                <li>Dashboards & admin panels</li>
+                <li>Performance-focused builds</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 service-card">
+            <div class="card-body">
+              <div class="icon-pill mb-3">
+                <i class="bi bi-palette"></i>
+              </div>
+              <h3 class="h5">Product & UI/UX Design</h3>
+              <p class="text-muted small">
+                User research, journey mapping, wireframes and high-fidelity
+                prototypes to validate ideas faster.
+              </p>
+              <ul class="small text-muted">
+                <li>Design systems & style guides</li>
+                <li>Interactive prototypes</li>
+                <li>Accessibility-first approach</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 service-card">
+            <div class="card-body">
+              <div class="icon-pill mb-3">
+                <i class="bi bi-cpu"></i>
+              </div>
+              <h3 class="h5">AI & Automation</h3>
+              <p class="text-muted small">
+                Integrations with AI/ML APIs and custom workflows to automate
+                support, content and analytics.
+              </p>
+              <ul class="small text-muted">
+                <li>Chatbots & assistants</li>
+                <li>Recommendation engines</li>
+                <li>Process automation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 service-card">
+            <div class="card-body">
+              <div class="icon-pill mb-3">
+                <i class="bi bi-megaphone"></i>
+              </div>
+              <h3 class="h5">Branding & Growth</h3>
+              <p class="text-muted small">
+                Visual identity, content, and performance campaigns that connect
+                with the right audience.
+              </p>
+              <ul class="small text-muted">
+                <li>Brand & visual language</li>
+                <li>SEO & content strategy</li>
+                <li>Experiment-led growth</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="py-5 bg-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between mb-4">
+        <div>
+          <h2 class="section-title">Our Projects</h2>
+          <p class="text-muted mb-0">
+            A sample of recent collaborations across SaaS, e-commerce and
+            education.
+          </p>
+        </div>
+        <a href="#contact" class="btn btn-outline-primary mt-3 mt-md-0">
+          Start your project
+        </a>
+      </div>
+      <div class="projects-scroll-container">
+  
+  <div class="project-card-h">
+    <img src="{{ url_for('static', filename='images/saas.jpg') }}" alt="">
+    <h4>SaaS Analytics Dashboard</h4>
+    <p>A responsive admin dashboard with real-time metrics.</p>
+    <span class="project-tag">Next.js · Prisma · MySQL</span>
+  </div>
+
+  <div class="project-card-h">
+    <img src="{{ url_for('static', filename='images/ecom.jpg') }}" alt="">
+    <h4>E-commerce Storefront</h4>
+    <p>High-conversion storefront with optimized product discovery.</p>
+    <span class="project-tag">Next.js · Prisma · MySQL</span>
+  </div>
+
+
+  <div class="project-card-h">
+    <img src="{{ url_for('static', filename='images/elearn.jpg') }}" alt="">
+    <h4>Learning Platform</h4>
+    <p>Course pages, quizzes, dashboards for educators.</p>
+    <span class="project-tag">Next.js · Prisma · MySQL</span>
+  </div>
+
+  <div class="project-card-h">
+  <img src="{{ url_for('static', filename='images/fitness.png') }}" alt="">
+  <h4>Fitness App Dashboard</h4>
+  <p>Workout tracking, calorie insights and personalized fitness analytics.</p>
+  <span class="project-tag">React · Node.js · MongoDB</span>
+</div>
+
+<div class="project-card-h">
+  <img src="{{ url_for('static', filename='images/food.png') }}" alt="">
+  <h4>Food Delivery App</h4>
+  <p>Restaurant menu pages, location-based delivery and real-time tracking.</p>
+  <span class="project-tag">Flutter · Firebase</span>
+</div>
+
+<div class="project-card-h">
+  <img src="{{ url_for('static', filename='images/travel.png') }}" alt="">
+  <h4>Travel Booking Platform</h4>
+  <p>Hotel, flight and holiday booking system with recommendations.</p>
+  <span class="project-tag">Next.js · Prisma · MySQL</span>
+</div>
+
+
+
+</div>
+
+    </div>
+  </section>
+
+  <section id="blogs" class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">From the Blog</h2>
+        <p class="text-muted">
+          Insights on product, design and engineering from the InnovateHive
+          team.
+        </p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <article class="card h-100 blog-card">
+            <div class="card-body">
+              <span class="badge bg-primary-subtle text-primary mb-2 small">
+                Product
+              </span>
+              <h3 class="h5">Shipping v1.0 faster without burning out</h3>
+              <p class="small text-muted">
+                How we help founders trim scope, validate assumptions and
+                launch a focused v1.0 that users can actually try.
+              </p>
+              <a href="#" class="stretched-link small fw-semibold">
+                Read article <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 blog-card">
+            <div class="card-body">
+              <span class="badge bg-success-subtle text-success mb-2 small">
+                Design
+              </span>
+              <h3 class="h5">Design systems for early-stage teams</h3>
+              <p class="small text-muted">
+                A lightweight design system approach that keeps your interface
+                consistent without slowing teams down.
+              </p>
+              <a href="#" class="stretched-link small fw-semibold">
+                Read article <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="card h-100 blog-card">
+            <div class="card-body">
+              <span class="badge bg-warning-subtle text-warning mb-2 small">
+                Engineering
+              </span>
+              <h3 class="h5">Performance budgets for marketing sites</h3>
+              <p class="small text-muted">
+                Learn how we keep landing pages under strict performance
+                budgets while still looking visually rich.
+              </p>
+              <a href="#" class="stretched-link small fw-semibold">
+                Read article <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+  <a href="{{ url_for('blogs') }}" class="btn btn-primary">
+    More Blogs
+  </a>
+</div>
+
+  </section>
+
+  <section id="testimonials" class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="text-muted">
+          Teams who work with InnovateHive stay with InnovateHive.
+        </p>
+      </div>
+
+      <div class="testimonial-slider" aria-label="Client testimonials">
+        <div class="testimonial-card active">
+          <p class="testimonial-quote">
+            “InnovateHive felt like an extension of our product team. They
+            helped us go from idea to production in three months.”
+          </p>
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <img
+              src="{{ url_for('static', filename='images/test1 (2).jpg') }}"
+              class="rounded-circle testimonial-avatar"
+              alt="Profile photo of client"
+            />
+            <div>
+              <h3 class="h6 mb-0">Aarav Mehta</h3>
+              <p class="small text-muted mb-0">
+                Founder, FlowStack Analytics
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “Their design system improvements reduced our UI debt and made it
+            easier for new engineers to ship features.”
+          </p>
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <img
+              src="{{ url_for('static', filename='images/test1 (1).jpg') }}"
+              class="rounded-circle testimonial-avatar"
+              alt="Profile photo of client"
+            />
+            <div>
+              <h3 class="h6 mb-0">Sara Thomas</h3>
+              <p class="small text-muted mb-0">
+                Product Lead, NovaPay
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-quote">
+            “From branding to launch campaigns, InnovateHive has been our
+            long-term partner for everything digital.”
+          </p>
+          <div class="d-flex align-items-center justify-content-center gap-3">
+            <img
+              src="{{ url_for('static', filename='images/test1 (3).jpg') }}"
+              class="rounded-circle testimonial-avatar"
+              alt="Profile photo of client"
+            />
+            <div>
+              <h3 class="h6 mb-0">Ishita Rao</h3>
+              <p class="small text-muted mb-0">
+                Marketing Head, Clarity Health
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-dots mt-3" role="tablist"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <h2 class="section-title">FAQ</h2>
+          <p class="text-muted">
+            A few questions founders usually ask when they reach out to
+            InnovateHive.
+          </p>
+        </div>
+        <div class="col-lg-7">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqOneHeading">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqOne"
+                  aria-expanded="true"
+                  aria-controls="faqOne"
+                >
+                  How long does a typical project take?
+                </button>
+              </h2>
+              <div
+                id="faqOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="faqOneHeading"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Smaller marketing websites take 3–5 weeks. Product
+                  engagements usually run for 8–12 weeks depending on scope and
+                  integrations.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqTwoHeading">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqTwo"
+                  aria-expanded="false"
+                  aria-controls="faqTwo"
+                >
+                  Which tech stacks do you work with?
+                </button>
+              </h2>
+              <div
+                id="faqTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="faqTwoHeading"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  We are comfortable with React, Next.js, Vue, Flask, Django,
+                  Node, and modern cloud platforms like AWS, GCP and Render.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faqThreeHeading">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqThree"
+                  aria-expanded="false"
+                  aria-controls="faqThree"
+                >
+                  Do you only work with startups?
+                </button>
+              </h2>
+              <div
+                id="faqThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="faqThreeHeading"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  No. While we love early-stage teams, we also partner with
+                  enterprises and agencies that need additional product
+                  capacity.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-5 bg-white border-top">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-5">
+          <h2 class="section-title">Contact Us</h2>
+          <p class="text-muted">
+            Tell us about your idea, and we’ll share a rough timeline and
+            approach within two business days.
+          </p>
+          <ul class="list-unstyled text-muted small">
+            <li class="mb-2">
+              <i class="bi bi-envelope me-2"></i> hello@innovatehive.in
+            </li>
+            <li class="mb-2">
+              <i class="bi bi-telephone me-2"></i> +91-00000-00000
+            </li>
+            <li>
+              <i class="bi bi-geo-alt me-2"></i> Remote-first studio based in
+              India
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-7">
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <div class="alert alert-success" role="alert">
+            {{ messages[0] }}
+          </div>
+          {% endif %}
+          {% endwith %}
+
+          <form
+            class="contact-form"
+            method="POST"
+            action="{{ url_for('contact') }}"
+          >
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name*</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email*</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <label for="company" class="form-label">Company</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Project Details*</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  class="form-control"
+                  required
+                ></textarea>
+              </div>
+              <div class="col-12 d-flex align-items-center justify-content-between">
+                <button type="submit" class="btn btn-primary">
+                  Submit Enquiry
+                </button>
+                <p class="small text-muted mb-0">
+                  We usually respond in under 48 hours.
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 bg-dark text-light">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-3">
+      <p class="mb-0 small">
+        © {{ year }} InnovateHive. All rights reserved.
+      </p>
+      <div class="d-flex gap-3">
+        <a
+          href="#home"
+          class="text-decoration-none text-light small"
+        >Back to top</a>
+        <a href="#" class="text-decoration-none text-light small">
+          Privacy
+        </a>
+        <a href="#" class="text-decoration-none text-light small">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
